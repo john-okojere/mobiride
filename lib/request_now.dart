@@ -42,7 +42,7 @@ class _MyAppState extends State<Requestnow> {
                               fontFamily: 'Nunito',
                               fontSize: 15,
                               letterSpacing:
-                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              0 /*percentages not used in flutter. defaulting to zero*/,
                               fontWeight: FontWeight.normal,
                               height: 1,
                             ),

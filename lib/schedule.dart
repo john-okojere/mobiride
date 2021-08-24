@@ -23,13 +23,7 @@ class _SchedulepageState extends State<Schedulepage> {
         appBar: AppBar(
           title: Text('Mobride'),
           centerTitle: true,
-          leading: IconButton(
-            onPressed: null,
-            icon: Icon(
-              Icons.menu,
-              color: Colors.white,
-            ),
-          ),
+
           actions: [
             Padding(
               padding: EdgeInsets.only(right: 5),

@@ -32,6 +32,7 @@ dependencies:
   google_fonts:
   provider:
   http: ^0.12.2
+  permission: ^0.1.7
 
 
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'map/google_map.dart';
 import 'home_bottom.dart';
+import 'map/mapWidget.dart';
 
 class Homepage extends StatelessWidget {
   @override
@@ -28,7 +29,7 @@ class Homepage extends StatelessWidget {
           children: [
             Container(
               height: MediaQuery.of(context).size.height * 0.65,
-              child: GoogleMapScreen(),
+              child: MapWidget(),
             ),
             Expanded(
               child: Container(

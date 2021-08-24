@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'schedule/date.dart';
 import 'schedule/time.dart';
+import 'map/location.dart';
 
 enum WidgetMaker { scheduledate }
 
@@ -62,7 +63,8 @@ class _MyAppState extends State<Schedulebottom> {
                     alignment: Alignment.center,
                     child: ElevatedButton.icon(
                       onPressed: () {
-                        Navigator.pushNamed(context, "YourRoute");
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => MapSample()));
                       },
                       icon: Icon(
                         Icons.payment,

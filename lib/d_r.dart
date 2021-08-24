@@ -48,9 +48,46 @@ class _DriveOrRideState extends State<DriveOrRide> {
                     height:134 ,
                     width: 141,
                     child:RaisedButton(
-                        onPressed:(){
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => Homepage()));
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  content: Stack(
+                                    overflow: Overflow.visible,
+                                    children: <Widget>[
+                                      Positioned(
+                                        right: -40.0,
+                                        top: -40.0,
+                                        child: InkResponse(
+                                          onTap: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                          child: CircleAvatar(
+                                            child: Icon(Icons.close),
+                                            backgroundColor: Colors.indigo,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        child: Text(
+                                          'This feature is currently under development',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color.fromRGBO(0, 0, 0, 1),
+                                            fontFamily: 'Nunito',
+                                            fontSize: 15,
+                                            letterSpacing:
+                                            0 /*percentages not used in flutter. defaulting to zero*/,
+                                            fontWeight: FontWeight.normal,
+                                            height: 1,
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                );
+                              });
                         },
                         child:Container(
                             padding: EdgeInsets.only(top: 25),
