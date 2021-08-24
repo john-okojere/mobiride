@@ -1,0 +1,23 @@
+{
+    "name": "mobiride",
+    "short_name": "mobiride",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "Mobiride is a ride-sharing platform that connects You with other riders going your way. Are you a car owner or a commuter, mobiride aim is to make even commute memorable and less Expensive.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
