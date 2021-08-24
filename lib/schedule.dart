@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'map/google_map.dart';
 import 'schedule_bottom.dart';
 import 'package:http/http.dart' as http;
+import 'map/mapWidget.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 class Schedulepage extends StatefulWidget {
@@ -44,7 +44,7 @@ class _SchedulepageState extends State<Schedulepage> {
               height: MediaQuery.of(context).size.height * 0.6,
               child: Stack(
                 children: [
-                  GoogleMapScreen(),
+                  MapWidget(),
                   Positioned(
                     child:Padding(
                       padding: EdgeInsets.only(left: 20, right: 20, top: 30),

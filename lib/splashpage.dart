@@ -20,7 +20,7 @@ class SplashpagehomeWidget extends StatelessWidget {
             Text("MOBIRIDE", style: TextStyle(
               color: Colors.white
             ),),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.2,),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.15,),
             Container(
               alignment:Alignment.topLeft,
               child:Padding(
@@ -83,7 +83,7 @@ class SplashpagehomeWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height:MediaQuery.of(context).size.height * 0.2),
+            SizedBox(height:MediaQuery.of(context).size.height * 0.15),
             Container(
               alignment:Alignment.topLeft,
               child:Padding(
