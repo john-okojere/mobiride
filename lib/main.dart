@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
-import 'package:flutter/material.dart';
 import 'splashpage.dart';
+
 
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
 
   @override

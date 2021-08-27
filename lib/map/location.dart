@@ -28,8 +28,8 @@ class _MapSampleState extends State<MapSample> {
       interval: 100,
     );
     location.onLocationChanged.listen((LocationData currentLocation) {
-      latitude_current = currentLocation.latitude;
-      longitude_current = currentLocation.longitude;
+      latitude_current = currentLocation.latitude!;
+      longitude_current = currentLocation.longitude!;
       _goToTheLake();
     });
   }
@@ -48,9 +48,8 @@ class _MapSampleState extends State<MapSample> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        title: Text("Ride Mode"),
-
-        actions: <Widget>[IconButton(icon: Icon(Icons.add), onPressed: _GetDeviceLocation)],
+        title: Text("Your Location"),
+        centerTitle: true,
       ),
       body: GoogleMap(
         mapType: MapType.satellite,

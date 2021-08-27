@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "581824254338",
+    "project_id": "mobiride-1ea8b",
+    "storage_bucket": "mobiride-1ea8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581824254338:android:30bd4d6ecf2bf55bd57f9b",
+        "android_client_info": {
+          "package_name": "com.mobiride.mobiride"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581824254338-pq5k6qu2vtt6m1drkr5qnmhqotuj2e3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDKVT6CNmt8fplgtLgSNTHsQuYTWk0EGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581824254338-pq5k6qu2vtt6m1drkr5qnmhqotuj2e3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

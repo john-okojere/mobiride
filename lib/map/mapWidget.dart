@@ -17,8 +17,8 @@ class _MapSampleState extends State<MapWidget> {
   Map<PolylineId, Polyline> _mapPolylines = {};
   int _polylineIdCounter = 1;
 
-  static double latitude_current =6.465422;
-  static double longitude_current = 3.406448;
+  static var latitude_current =6.465422;
+  static var longitude_current = 3.406448;
 
   void _GetDeviceLocation() async {
     var location = new Location();
@@ -28,8 +28,8 @@ class _MapSampleState extends State<MapWidget> {
       interval: 100,
     );
     location.onLocationChanged.listen((LocationData currentLocation) {
-      latitude_current = currentLocation.latitude;
-      longitude_current = currentLocation.longitude;
+      latitude_current = currentLocation.latitude!;
+      longitude_current = currentLocation.longitude!;
       _goToTheLake();
     });
   }

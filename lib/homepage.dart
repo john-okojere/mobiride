@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'menu.dart';
 import 'map/google_map.dart';
 import 'home_bottom.dart';
 import 'map/mapWidget.dart';
@@ -8,6 +9,8 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
+        drawer: Menu(),
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: Text('Mobride'),
           centerTitle: true,

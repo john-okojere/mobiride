@@ -3,8 +3,10 @@ import 'package:geolocator/geolocator.dart';
 import 'schedule_bottom.dart';
 import 'package:http/http.dart' as http;
 import 'map/mapWidget.dart';
+import 'menu.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 class Schedulepage extends StatefulWidget {
   const Schedulepage({Key? key}) : super(key: key);
 
@@ -13,17 +15,15 @@ class Schedulepage extends StatefulWidget {
 }
 
 class _SchedulepageState extends State<Schedulepage> {
-
   @override
   Widget build(BuildContext context) {
-
     return Container(
       child: Scaffold(
+        drawer: Menu(),
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: Text('Mobride'),
           centerTitle: true,
-
           actions: [
             Padding(
               padding: EdgeInsets.only(right: 5),
@@ -40,75 +40,91 @@ class _SchedulepageState extends State<Schedulepage> {
         body: Column(
           children: [
             Container(
-
               height: MediaQuery.of(context).size.height * 0.6,
-              child: Stack(
-                children: [
-                  MapWidget(),
-                  Positioned(
-                    child:Padding(
-                      padding: EdgeInsets.only(left: 20, right: 20, top: 30),
-                      child: Column(
-                          children: [
-                      Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Stack(
-                        children: [
-                          Container(
-                            height:50,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(30))
-                            ),
-                          ),
-                          Positioned(
-                            child:TextFormField(
-                              onChanged: (val){
-                                Findplaces(val);
-                              },
-                              decoration: InputDecoration(
-                                icon: Icon(Icons.location_pin),
-                                hintText: 'Your Location',
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-
-                    ),
-                            Padding(
-                              padding: EdgeInsets.all(10),
-                              child:Stack(
-                                children: [
-                                  Container(
-                                    height:50,
-                                    width: double.infinity,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.all(Radius.circular(30))
+              child: Stack(children: [
+                MapWidget(),
+                Positioned(
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 20, right: 20, top: 30),
+                    child: Column(
+                      children: [
+                        Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(30)),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.grey.withOpacity(0.5),
+                                        spreadRadius: 5,
+                                        blurRadius: 7,
+                                        offset: Offset(0, 2),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  child: TextFormField(
+                                    onChanged: (val) {
+                                      Findplaces(val);
+                                    },
+                                    decoration: InputDecoration(
+                                      icon: Icon(Icons.location_pin),
+                                      hintText: 'Your Location',
+                                      border: InputBorder.none,
                                     ),
                                   ),
-                                  Positioned(
-                                    child:TextFormField(
-                                      decoration: InputDecoration(
-                                        icon: Icon(Icons.location_pin,
-                                        color: Colors.red,),
-                                        hintText: 'Your Desitination',
-                                        border: InputBorder.none,
-                                      ),
+                                )
+                              ],
+                            )),
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Stack(
+                            children: [
+                              Container(
+                                height: 50,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(30)),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 5,
+                                      blurRadius: 7,
+                                      offset: Offset(0, 2),
                                     ),
-                                  )
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                  ],),)
-                    ,),
-      ]),
-    ),
-
-
+                              Positioned(
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    icon: Icon(
+                                      Icons.location_pin,
+                                      color: Colors.red,
+                                    ),
+                                    hintText: 'Your Desitination',
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
+            ),
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
@@ -130,12 +146,13 @@ class _SchedulepageState extends State<Schedulepage> {
   }
 }
 
-void Findplaces(String placeName) async{
-  if (placeName.length > 1  ){
-    String autoCompleteUrl = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$placeName&key=AIzaSyCQr1DkMgb54nnOuhVwOloEwQlSCzjutJE";
+void Findplaces(String placeName) async {
+  if (placeName.length > 1) {
+    String autoCompleteUrl =
+        "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$placeName&key=AIzaSyCQr1DkMgb54nnOuhVwOloEwQlSCzjutJE";
     var RequestAssistant;
     var res = await RequestAssistant.getRequest(autoCompleteUrl);
-    if(res =="failed"){
+    if (res == "failed") {
       return;
     }
     print("places predictions response !!");

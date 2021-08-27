@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'package:mobiride/d_r.dart';
+import 'package:mobiride/signup/sign_in.dart';
 
 class SplashpagehomeWidget extends StatelessWidget {
   @override
@@ -90,22 +90,22 @@ class SplashpagehomeWidget extends StatelessWidget {
                 padding: EdgeInsets.only(
                   left:20,
                 ),
-                child: TextButton(
+                child: RaisedButton(
                   onPressed:(){
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => DriveOrRide()));
+                        builder: (context) => SignIn()));
                   },
-                  child: Text(
-                    "Get Started",
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.black
-                    ),
-                  ),
-                  style:ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Color.fromRGBO(255, 255, 255, 1),
-                  ) ,
+                  child:Container(
+                    padding: EdgeInsets.all(10),
+
+                    child: Text(
+                      "Get Started",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black
+                      ),
+                  )
+
                 ),
               ),),),
           ],
