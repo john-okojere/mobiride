@@ -15,7 +15,9 @@ class _SignInState extends State<SignIn> {
   bool visibilityphone = true;
   bool visibilityaccount = false;
   bool visibilityemail = false;
-
+  bool _keyboardIsVisible() {
+    return !(MediaQuery.of(context).viewInsets.bottom == 0.0);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +62,7 @@ class _SignInState extends State<SignIn> {
             ),
           ),
           Positioned.fill(
-            top: MediaQuery.of(context).size.height * 0.25,
+            top: _keyboardIsVisible() ? MediaQuery.of(context).size.height * -0.35 : MediaQuery.of(context).size.height * 0.25,
             child: Align(
               alignment: Alignment.center,
               child: Container(

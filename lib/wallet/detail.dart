@@ -29,10 +29,10 @@ class _Trans_DetailState extends State<Trans_Detail> {
       ),
       body: Container(
         color: Colors.white,
-        padding: EdgeInsets.all(30),
+        padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.05),
             Container(
               child: Text(
                 'Transaction Details',
@@ -42,7 +42,7 @@ class _Trans_DetailState extends State<Trans_Detail> {
                 ),
               ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.05),
             Container(
               child: Column(
                 children: [

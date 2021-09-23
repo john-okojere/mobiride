@@ -40,7 +40,7 @@ class _WalletState extends State<Wallet> {
             ),
             Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.only(left:20,right: 20),
               child: Text(
                 'Wallet',
                 style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
@@ -67,11 +67,9 @@ class _WalletState extends State<Wallet> {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
-              height: 30,
-            ),
+  SizedBox(height: 30,),
             Container(
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.only(left:30,right: 30),
               child: Column(
                 children: [
                   Container(
@@ -94,8 +92,9 @@ class _WalletState extends State<Wallet> {
                 ],
               ),
             ),
+            SizedBox(height: 10,),
             Container(
-                height: MediaQuery.of(context).size.height * 0.6,
+                height: MediaQuery.of(context).size.height * 0.55,
                 padding: EdgeInsets.only(left: 40, right: 40),
                 child: Transaction()),
           ],

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'package:mobiride/signup/sign_in.dart';
+import 'homepage.dart';
 
 class SplashpagehomeWidget extends StatelessWidget {
   @override
@@ -93,7 +93,7 @@ class SplashpagehomeWidget extends StatelessWidget {
                 child: RaisedButton(
                   onPressed:(){
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SignIn()));
+                        builder: (context) => Homepage()));
                   },
                   child:Container(
                     padding: EdgeInsets.all(10),
