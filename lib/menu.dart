@@ -158,7 +158,7 @@ class _MenuState extends State<Menu> {
           onTap: () async {
             (email == null
                 ? setState(() {Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => Signn()));})
+                builder: (context) => SignIn()));})
                 : await FirebaseAuth.instance.signOut());
             setState(() {
                 Navigator.of(context).push(MaterialPageRoute(

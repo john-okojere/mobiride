@@ -88,16 +88,19 @@ class _actdetailState extends State<actdetail> {
                           setState(() {});
                         },
                         child: Container(
-                            width: 100,
+                            width: 85,
                             alignment: Alignment.center,
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.only(
+                              top: 10,
+                              bottom: 10
+                            ),
                             child: Text(
                               "Sign up",
                               style: TextStyle(fontSize: 20, color: Colors.white),
                             )),
                       ),
                     ),
-                    SizedBox(width: 20,),
+                    SizedBox(width: 10,),
                     Container(
                       alignment: Alignment.center,
                       child: RaisedButton(
@@ -113,16 +116,15 @@ class _actdetailState extends State<actdetail> {
 
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => Homepage()));
-                          }else{
-                            setState(() {
-                              text = 'Enter the right detail';
-                            });
-                          }
+
                         },
                         child: Container(
-                            width: 100,
+                            width: 85,
                             alignment: Alignment.center,
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.only(
+                              bottom: 10,
+                              top: 10
+                            ),
                             child: Text(
                               "Sign In",
                               style: TextStyle(fontSize: 20, color: Colors.white),

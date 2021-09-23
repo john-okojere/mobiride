@@ -113,7 +113,7 @@ class _DriveOrRideState extends State<DriveOrRide> {
                         )
                     ) ,
                   ),
-                  SizedBox(width: 50,),
+                  SizedBox(width: 20,),
                   Container(
                     height:134 ,
                     width: 141,

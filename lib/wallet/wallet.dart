@@ -95,7 +95,7 @@ class _WalletState extends State<Wallet> {
             SizedBox(height: 10,),
             Container(
                 height: MediaQuery.of(context).size.height * 0.55,
-                padding: EdgeInsets.only(left: 40, right: 40),
+                padding: EdgeInsets.only(left: 10, right: 10),
                 child: Transaction()),
           ],
         ),
